@@ -1,0 +1,14 @@
+/*
+ * oled_test.c
+ *
+ *  Created on: 28 Þub 2016
+ *      Author: emink
+ */
+int main(void){
+clear();
+print_message("Texas A&M Qatar",0);
+print_message("ECEN Department",2);
+print_message(" ECEN449 ",3);
+return (1);
+}
+

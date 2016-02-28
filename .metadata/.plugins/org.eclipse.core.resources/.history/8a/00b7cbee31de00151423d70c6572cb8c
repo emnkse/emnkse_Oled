@@ -1,0 +1,17 @@
+/*
+ * oled_test.c
+ *
+ *  Created on: 28 Þub 2016
+ *      Author: emink
+ */
+#include "stdio.h"
+#include "stdlib.h"
+int main(void){
+clear();
+print_message("Allah",0);
+print_message("      var",2);
+delay(500);
+print_message(" 2016 ",3);
+return (1);
+}
+

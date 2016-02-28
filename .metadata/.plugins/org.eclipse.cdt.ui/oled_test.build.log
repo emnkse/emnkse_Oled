@@ -1,0 +1,34 @@
+18:00:31 **** Auto Build of configuration Debug for project oled_test ****
+make all 
+'Building file: ../src/oled_test.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/oled_test.o" -I../../oled_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/oled_test.d" -MT"src/oled_test.d" -o "src/oled_test.o" "../src/oled_test.c"
+../src/oled_test.c: In function 'main':
+../src/oled_test.c:9:1: warning: implicit declaration of function 'clear' [-Wimplicit-function-declaration]
+ clear();
+ ^
+../src/oled_test.c:12:2: warning: statement with no effect [-Wunused-value]
+  for(i; i<500;i++)
+  ^
+../src/oled_test.c:14:4: warning: implicit declaration of function 'print_message' [-Wimplicit-function-declaration]
+    print_message("Allah",0);
+    ^
+../src/oled_test.c:17:4: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+    sleep(2);
+    ^
+'Finished building: ../src/oled_test.c'
+' '
+'Building target: oled_test.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../oled_test_bsp/ps7_cortexa9_0/lib -o "oled_test.elf"  ./src/oled_test.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: oled_test.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size oled_test.elf  |tee "oled_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  23272	   1152	  22820	  47244	   b88c	oled_test.elf
+'Finished building: oled_test.elf.size'
+' '
+
+18:00:31 Build Finished (took 620ms)
+
